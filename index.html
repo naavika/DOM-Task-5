@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation Example</title>
+</head>
+<body>
+
+    <ul id="myList">
+        <li class="item">Item 1</li>
+        <li class="item">Item 2</li>
+        <li class="item">Item 3</li>
+    </ul>
+
+    <script>
+        
+        function addNewListItem() {
+            
+            var newListItem = document.createElement("li");
+            newListItem.textContent = "New Item";
+
+
+            document.getElementById("myList").appendChild(newListItem);
+        }
+
+
+        addNewListItem();
+
+        var itemsWithClass = document.getElementsByClassName("item");
+        if (itemsWithClass.length > 0) {
+            
+            itemsWithClass[0].style.color = "red";
+        }
+
+    
+        var liElements = document.getElementsByTagName("li");
+        if (liElements.length > 0) {
+        
+            liElements[0].style.fontWeight = "bold";
+        }
+    </script>
+
+</body>
+</html>
